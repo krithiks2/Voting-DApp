@@ -1,28 +1,43 @@
-# Decentralized Voting Application
+## DAPP FOR A VOTING SYSTEM
 
-This is a demo application to implement voting in solidity smart contract using ReactJS. 
+A simple decentralized voting application built with React, Hardhat, Solidity, and MetaMask.
 
-[Youtube Tutorial](https://youtu.be/eCn6mHTpuM0)
+## Setup Instructions
 
-## Installation
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/your-repo/React-Voting-DApp.git
+   cd React-Voting-DApp
+   ```
 
-After you cloned the repository, you want to install the packages using
+2. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
 
-```shell
-npm install
-```
+3. **Start Ganache:**
+   - Open Ganache and create a workspace.
+   - Use RPC URL: `http://127.0.0.1:7545`.
 
-You first need to compile the contract and upload it to the blockchain network. Run the following commands to compile and upload the contract.
+4. **Deploy the Smart Contract:**
+   ```sh
+   npx hardhat run scripts/deploy.js --network ganache
+   ```
 
-```shell
-npx hardhat compile
-npx hardhat run --network volta scripts/deploy.js
-```
+5. **Update Frontend Configuration:**
+   - Copy the deployed contract address.
+   - Update `constant.js`:
+   ```js
+   export const contractAddress = "YOUR_NEW_CONTRACT_ADDRESS";
+   ```
 
-Once the contract is uploaded to the blockchain, copy the contract address and copy it in the .env file. You can also use another blockchain by writing the blockchain's endpoint in hardhat-config.
+6. **Run the Application:**
+   ```sh
+   npm start
+   ```
 
-Once you have pasted your private key and contract address in the .env file, simply run command
+7. Open **http://localhost:3000/** and connect MetaMask to vote.
 
-```shell
-npm start
-```
+
+🚀 Happy Coding!
+
